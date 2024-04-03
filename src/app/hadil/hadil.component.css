@@ -1,0 +1,12 @@
+.intro {
+  font-family: Arial, sans-serif; /* Specify font family */
+  font-size: 30px; /* Set font size */
+  line-height: 1.6; /* Set line height */
+  color: #333; /* Set text color */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+.btn-custom-color {
+  background-color: white;
+  border-color: #8929c3;
+  color: #8929c3;
+}
