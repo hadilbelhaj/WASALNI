@@ -1,0 +1,64 @@
+
+.title{
+    font-family: "Open Sans";
+    font-weight: bold;
+    size: 35px;
+    color:#03014C;
+}
+.center {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+    padding-top: 10%;
+  }
+  .input-with-icon {
+    position: relative;
+}
+.input-with-icon input {
+    padding-left: 50px; /* Adjust this value according to your icon size */
+}
+.input-with-icon .icon {
+    position: absolute;
+    left: 8px; /* Adjust this value for icon alignment */
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-field{
+    border:0px;
+    height:65px;
+    width: 500px;
+    font-family: "Open Sans";
+    font-size:16px;
+    font-weight:600;
+    
+
+}
+
+.button{
+    height:76px;
+    width: 500px;
+    font-family:"Open Sans";
+    font-size:16px;
+    font-weight: 600;
+    color:white;
+}
+.signUpWithButton{
+    width:240px;
+    height:65px;
+    color:#03014C;
+    font-family:"Open Sans";
+    font-size:14px;
+    font-weight: 600;
+    border: 1px solid;
+    margin-top: 10px;
+}
+.logo{
+    height: 21px;
+    width: 23px;
+    padding-right: 5px;
+}
+label{
+    font-family:"Open Sans";
+    font-size:16px;
+    font-weight: 600;
+}

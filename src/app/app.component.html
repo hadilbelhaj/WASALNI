@@ -1,44 +1,23 @@
-<!--<nav class="navbar navbar-expand-lg bg-body-tertiary bg-success">
+
+<nav class="navbar nav navbar-lg navbar-expand-lg">
   <div class="container-fluid">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <a class="navbar-brand title" routerLink="/home">Wasalni</a>
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i></i></span>
+    </button> -->
+    <div class="collapse navbar-collapse text">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          <a class="nav-link active" routerLink="/home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about">about</a>
+          <a class="nav-link" routerLink="/profile">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/profile"
-            >profile</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/voyage"
-            >choisir Trajet</a
-          >
+          <a class="nav-link" routerLink="/about">About</a>
         </li>
       </ul>
     </div>
-  </div>
-</nav>-->
-<nav>
-  <span id="title">WASALNI</span>
-  <div id="nav">
-    <span><a aria-current="page" routerLink="">Home</a></span>
-    <span><a aria-current="page" routerLink="/profile">Services</a></span>
-    <span><a routerLink="/about">about</a></span>
   </div>
 </nav>
 <router-outlet></router-outlet>

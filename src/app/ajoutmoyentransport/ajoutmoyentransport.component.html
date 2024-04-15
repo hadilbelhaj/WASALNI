@@ -1,24 +1,31 @@
-<div id="main">
-  <p>Ajout d'un moyen de Transport:</p>
-  <form id="form">
-    <label for="id">ID:</label>
-    <input type="text" id="id" name="identifier" form-control />
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" name="namee" form-control />
-    <label for="etat">Etat:</label>
-    <input type="text" id="etat" name="disponible" form-control />
-    <div class="row">
-      <div class="col d-grid">
-        <button type="submit" class="btn btn-custom-color btn-block">
-          Ajouter
-        </button>
+
+<div class="center">
+  <h2 class="title">Ajouter un moyen de Transport</h2>
+  <form class="needs-validation">
+      <div class="input-with-icon my-3 ">
+          <span class="icon"><i class="fas fa-id-card "></i></span>
+          <input type="text" class="form-control input-field" placeholder="id" required>
+          <div class="valid-feedback">Valid</div>
+          <div class="invalid-feedback">Please fill out his field</div>
       </div>
-      <div class="col d-grid">
-        <button type="reset" class="btn btn-custom-color btn-block">
-          Annuler
-        </button>
+      <div class="row">
+        <div class="col-6">
+          <label class="form-text">Choisir le moyen de transport</label>
+        </div>
+        <div class="col-4">
+          <select class="form-select">
+            <option>Bus</option>
+            <option>Métro</option>
+          </select>
+        </div>
       </div>
-    </div>
-    <br /><br />
+
+      <div class="input-with-icon my-3 ">
+          <!-- <span class="icon"><i class="fa fa-envelope"></i></span> -->
+          <input type="email" class="form-control-sm input-field" placeholder="etat(disponible par défaut)" required>
+          <div class="valid-feedback">Valid</div>
+          <div class="invalid-feedback">Invalid email</div>
+      </div>
+      <button type="submit" class="btn button"> Ajouter</button>
   </form>
 </div>

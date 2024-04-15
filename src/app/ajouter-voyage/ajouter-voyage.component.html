@@ -1,0 +1,25 @@
+<div class="center">
+    <h2 class="title">Ajouter un voyage</h2>
+
+    <form class="needs-validation">
+        <div class="input-with-icon my-3 ">
+            <span class="icon"><i class="fas fa-id-card"></i></span>
+            <input type="text" class="form-control input-field" pattern="[0-9]{4}" placeholder="Numéro secteur(4 digits)" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please fill out his field</div>
+        </div>
+        <div class="input-with-icon my-3 ">
+            <span class="icon"><i class="fas fa-id-card"></i></span>
+            <input type="text" class="form-control input-field"  pattern="[0-9]{4}" placeholder="Numéro voyage(4digits)" required>
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Please fill out his field</div>
+        </div>
+        <div class="my-3 ">
+            <label>Temp départ</label>
+            <input type="time" step="1" class="form-control input-field" placeholder="Temp arrivée" required>
+            <label>Temp arrivée</label>
+            <input type="time" step="1"class="form-control input-field" placeholder="Temp arrivée" required>
+        </div>
+        <button type="submit" class="btn button" style="background-color:#30C16A;font-size: 16px;">Ajouter</button>
+    </form>
+</div>
