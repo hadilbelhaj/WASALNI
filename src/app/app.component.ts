@@ -6,6 +6,7 @@ import { AboutComponent } from './about/about.component';
 import { EnregistrervoyageComponent } from './enregistrervoyage/enregistrervoyage.component';
 import { AjoutmoyentransportComponent } from './ajoutmoyentransport/ajoutmoyentransport.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 @Component({
   selector: 'app-root',
   standalone: true,

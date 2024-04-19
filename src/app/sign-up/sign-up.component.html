@@ -36,9 +36,18 @@
             <div class="valid-feedback">Valid</div>
             <div class="invalid-feedback">You must confirm password</div>
         </div>
-        <button type="submit" class="btn button" style="background-color:#30C16A;font-size: 16px;">Create account</button>
-        <button type="button" class="btn signUpWithButton" style="margin-right: 20px;"><img src="../../assets/images/g.webp" class="logo"> Google</button>
-        <button type="button" class="btn signUpWithButton"><img src="../../assets/images/fb.png" class="logo">Facebook</button>
+        <button type="submit" class="btn button" style="background-color:#30C16A;font-size: 16px;"><a class="nav-link" routerLink="/sign-in">Create account</a></button>
+        <div class="row">
+            <div class="col-6">
+                <button type="button" class="btn signUpWithButton" style="margin-left: 20px"><img src="../../assets/images/g.webp" class="logo">Google</button>
+            </div>
+            <div class="col-6">
+                <button type="button" class="btn signUpWithButton" style="margin-left: 20px"><img src="../../assets/images/fb.png" class="logo">Facebook</button>
+
+            </div>
+        </div>
+     
     </form>
 
 </div>
+<router-outlet></router-outlet>

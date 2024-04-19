@@ -42,3 +42,18 @@
     font-weight: 600;
     color:white;
 }
+.signUpWithButton{
+    width:220px;
+    height:65px;
+    color:#03014C;
+    font-family:"Open Sans";
+    font-size:14px;
+    font-weight: 600;
+    border: 1px solid;
+    margin-top: 10px;
+  }
+  .logo{
+    height: 21px;
+    width: 23px;
+    padding-right: 5px;
+  }
