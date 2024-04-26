@@ -1,31 +1,28 @@
 
 <div class="center">
   <h2 class="title">Ajouter un moyen de Transport</h2>
-  <form class="needs-validation">
+  <form class="needs-validation" action="http://localhost/api/add_moyen_transport.php" method="POST">
+      <label class="form-text">Choisir le moyen de transport</label>
+      <div style="width: 500px;" class="my-3">
+        <select [(ngModel)]="transport.nom" name="nom" class="form-select">
+          <option>Bus</option>
+          <option>Métro</option>
+        </select>
+      </div>
+      <label class="form-text">Matricule</label>
       <div class="input-with-icon my-3 ">
-          <span class="icon"><i class="fas fa-id-card "></i></span>
-          <input type="text" class="form-control input-field" placeholder="id" required>
-          <div class="valid-feedback">Valid</div>
-          <div class="invalid-feedback">Please fill out his field</div>
+        <span class="icon"><i class="fas fa-id-card"></i></span>
+        <input [(ngModel)]="transport.matricule" name="matricule" type="text" class="form-control input-field" placeholder="Matricule" required>
+        <div class="valid-feedback">Valid</div>
+        <div class="invalid-feedback">Please fill out his field</div>
+    </div>
+      <label class="form-text">Choisir l'état du moyen de transport</label>
+      <div style="width: 500px;"class="mb-3">
+        <select [(ngModel)]="transport.etat" name="etat"class="form-select">
+          <option selected>Disponible</option>
+          <option>n'est pas Disponible</option>
+        </select>
       </div>
-      <div class="row">
-        <div class="col-6">
-          <label class="form-text">Choisir le moyen de transport</label>
-        </div>
-        <div class="col-4">
-          <select class="form-select">
-            <option>Bus</option>
-            <option>Métro</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="input-with-icon my-3 ">
-          <!-- <span class="icon"><i class="fa fa-envelope"></i></span> -->
-          <input type="email" class="form-control-sm input-field" placeholder="etat(disponible par défaut)" required>
-          <div class="valid-feedback">Valid</div>
-          <div class="invalid-feedback">Invalid email</div>
-      </div>
-      <button type="submit" class="btn button"> Ajouter</button>
+      <button type="submit" (click)="AjouterMoyenTranport()" class="btn button">Ajouter</button>
   </form>
 </div>

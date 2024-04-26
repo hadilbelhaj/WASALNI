@@ -1,0 +1,24 @@
+<div>
+    <button type="button" class="btn btn-primary">Ajouter voyage </button>
+    <div class="center">
+        <h2 class="title">Liste des voyage du secteur :</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>voyage id</td>
+                    <td>temp_dep</td>
+                    <td>temp_arr</td>                        
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let voyage of voyages">
+                    <td>voyage.id</td>
+                    <td>voyage.temp_dep</td>
+                    <td>voyage.temp_arrivee</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

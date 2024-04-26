@@ -1,13 +1,19 @@
 <div class="center">  
     <h2 class="title">Consulter Secteur</h2>
-    <form class="needs-validation" action="../consulter-voyage">
-        <div class="input-with-icon my-3 ">
-            <span class="icon"><i class="fa fa-id-card"></i></span>
-            <input type="text" class="form-control input-field" pattern="[0-9]{4}" placeholder="Numéro voyage" required>
-            <div class="valid-feedback">Valid</div>
-            <div class="invalid-feedback">Invalid email</div>
+    <form class="needs-validation" action="http://localhost/api/secteurs.php" method="get">
+        Ville depart : 
+        <div style="width:450px">
+            <select [(ngModel)]="selectedDepart" name="vd" class="form-select">
+                <option *ngFor="let secteur of secteurs">{{secteur}}</option>
+            </select>
         </div>
-        <button type="submit" class="btn button" style="background-color:#30C16A;font-size: 16px;"><a class="nav-link" routerLink="/consulter-voyage">Consulter secteur</a></button>
+        Ville arrivée
+        <div class="mb-3" style="width:450px">
+            <select  [(ngModel)]="selectedArrivee" class="form-select" name="vd">
+                <option *ngFor="let secteur of secteurs">{{secteur}}</option>
+            </select>
+        </div>
+        <button type="submit" (click)="check()" class="btn button" style="background-color:#30C16A;font-size: 16px;">Consulter secteur</button>
     </form>
 </div>
 <router-outlet></router-outlet>
