@@ -18,36 +18,44 @@
     Follow the instructions to make it easier to sign in and you will be able to
     explore inside.
   </p>
-  <form class="needs-validation">
+  <form (ngSubmit)="onSubmit()" class="needs-validation">
     <div class="input-with-icon my-3">
       <span class="icon"><i class="fa fa-envelope"></i></span>
       <input
+        [(ngModel)]="email"
         type="email"
         class="form-control input-field"
         placeholder="Email"
         required
+        [ngModelOptions]="{ standalone: true }"
+        id="mail"
+        name="email"
       />
       <div class="valid-feedback">Valid</div>
-      <div class="invalid-feedback">Invalid email</div>
+      <div *ngIf="submitted" class="invalid-feedback">Invalid email</div>
     </div>
 
     <div class="input-with-icon my-3">
       <span class="icon"><i class="fas fa-lock"></i></span>
       <input
+        [(ngModel)]="password"
         type="password"
         class="form-control input-field"
         placeholder="Confirm password"
         required
+        [ngModelOptions]="{ standalone: true }"
+        id="password"
+        name="passwords"
       />
       <div class="valid-feedback">Valid</div>
-      <div class="invalid-feedback">Invalid password</div>
+      <div *ngIf="submitted" class="invalid-feedback">Invalid password</div>
     </div>
     <button
       type="submit"
       class="btn button"
       style="background-color: #30c16a; font-size: 16px"
     >
-      <a class="nav-link" routerLink="">Sign in</a>
+      Sign IN
     </button>
   </form>
 </div>

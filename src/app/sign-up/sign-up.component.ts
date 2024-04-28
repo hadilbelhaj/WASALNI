@@ -3,22 +3,49 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { LoginComponent } from '../deleted/loginadmin/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
+import { NgModel } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
-  imports: [RouterLink, LoginComponent, RouterOutlet, HttpClientModule],
+  imports: [
+    RouterLink,
+    LoginComponent,
+    RouterOutlet,
+    HttpClientModule,
+    FormsModule,
+  ],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css',
 })
 export class SignUpComponent {
-  constructor(private http: HttpClient) {
+  public email = '';
+  public password = '';
+  public fullname = '';
+  public username = '';
+  public typeaccount = '';
+  submitted = false;
+  constructor(private http: HttpClient, private router: Router) {}
+  onCreate() {
+    this.submitted = true;
     this.http
-      .post(
-        'http://localhost/api/login/login.php',
-        `{"email":"hadilbelhaj67@gmail.com","password":"465455"}`
-      )
-      .subscribe((data) => console.log(data));
+      .post('http://localhost/api/login/signin.php', {
+        email: this.email,
+        password: this.password,
+        fullname: this.fullname,
+        username: this.username,
+        type: this.typeaccount,
+      })
+      .subscribe(
+        (reponse: any) => {
+          console.log('reponse', reponse);
+          alert('creation succeful');
+          this.router.navigate(['/profile']);
+        },
+        (error) => {
+          console.error(error);
+        }
+      );
   }
-  goToLogIn() {}
 }

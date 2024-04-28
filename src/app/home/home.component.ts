@@ -5,12 +5,14 @@ import { AboutComponent } from '../about/about.component';
 import { Router } from '@angular/router';
 import { ServiceShService } from '../services/service-sh.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { RouterLink } from '@angular/router';
+
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent {
   title:
@@ -28,9 +30,9 @@ export class HomeComponent {
     console.log(f);
   }
   goTosignup() {
-    this.route.navigate(['sign_up']);
+    this.route.navigate(['sign-up']);
   }
-  goToLogIn() {
+  goTosignin() {
     this.route.navigate(['sign-in']);
   }
 }
