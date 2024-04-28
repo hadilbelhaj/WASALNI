@@ -5,19 +5,23 @@ import { AjoutmoyentransportComponent } from './ajoutmoyentransport/ajoutmoyentr
 import { ProfileComponent } from './profile/profile.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
-import { SignUpAdminComponent } from './sign-up-admin/sign-up-admin.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ConsulterSecteurComponent } from './consulter-secteur/consulter-secteur.component';
 import { AjouterVoyageComponent } from './ajouter-voyage/ajouter-voyage.component';
 import { ConsulterVoyageComponent } from './consulter-voyage/consulter-voyage.component';
 import { ModifierSupprimerVoyageComponent } from './modifier-supprimer-voyage/modifier-supprimer-voyage.component';
+<<<<<<< HEAD
 import { ListVoyageComponent } from './list-voyage/list-voyage.component';
+=======
+
+>>>>>>> f7bacc67804d46d92361c9ea71d237c6cd7f8268
 export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'voyage', component: EnregistrervoyageComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'ajoutmoyentransport', component: AjoutmoyentransportComponent },
   { path: 'enregistrervoyage', component: EnregistrervoyageComponent },
+<<<<<<< HEAD
   { path : 'sign_up',component:SignUpComponent },
   { path: 'home',component:HomeComponent},
   {path:'sign-up',component:SignUpComponent},
@@ -28,4 +32,16 @@ export const routes: Routes = [
   {path:'consulter-voyage',component:ConsulterVoyageComponent},
   {path:'modifier-supprimer-voyage',component:ModifierSupprimerVoyageComponent},
   {path:'list-voyage',component:ListVoyageComponent}
+=======
+  { path: 'home', component: HomeComponent },
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'consulter-secteur', component: ConsulterSecteurComponent },
+  { path: 'ajouter-voyage', component: AjouterVoyageComponent },
+  { path: 'consulter-voyage', component: ConsulterVoyageComponent },
+  {
+    path: 'modifier-supprimer-voyage',
+    component: ModifierSupprimerVoyageComponent,
+  },
+>>>>>>> f7bacc67804d46d92361c9ea71d237c6cd7f8268
 ];
