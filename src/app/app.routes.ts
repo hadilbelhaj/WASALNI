@@ -11,6 +11,7 @@ import { ConsulterSecteurComponent } from './consulter-secteur/consulter-secteur
 import { AjouterVoyageComponent } from './ajouter-voyage/ajouter-voyage.component';
 import { ConsulterVoyageComponent } from './consulter-voyage/consulter-voyage.component';
 import { ModifierSupprimerVoyageComponent } from './modifier-supprimer-voyage/modifier-supprimer-voyage.component';
+import { ListVoyageComponent } from './list-voyage/list-voyage.component';
 export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'voyage', component: EnregistrervoyageComponent },
@@ -25,5 +26,6 @@ export const routes: Routes = [
   {path:'consulter-secteur',component:ConsulterSecteurComponent},
   {path:'ajouter-voyage',component:AjouterVoyageComponent},
   {path:'consulter-voyage',component:ConsulterVoyageComponent},
-  {path:'modifier-supprimer-voyage',component:ModifierSupprimerVoyageComponent}
+  {path:'modifier-supprimer-voyage',component:ModifierSupprimerVoyageComponent},
+  {path:'list-voyage',component:ListVoyageComponent}
 ];

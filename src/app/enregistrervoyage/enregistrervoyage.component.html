@@ -1,39 +1,49 @@
-<div id="main">
-  <p>Choisir Votre Trajet</p>
-  <form action="" id="form">
-    <label for="secteur">Secteur :</label>
-    <input
-      list="secteurs"
-      name="secteur"
-      id="secteur"
-      placeholder="Ariana-Manzah"
-    />
-    <datalist id="secteurs">
-      <option value="Ariana-Manzah"></option>
-    </datalist>
-    <label for="moyentt">Moyen de transport:</label>
-    <input list="moyt" name="moyenT" id="moyentt" placeholder="Bus" />
-    <datalist id="moyenT">
-      <option value="Bus"></option>
-    </datalist>
-    <label for="horraire">Horraire :</label>
-    <input list="heure" name="heures" id="horraire" placeholder="9:00" />
-    <datalist id="horraire">
-      <option value="9:00"></option>
-    </datalist>
+<div class="center">
+  <h2 class="title">Enregistrer Trajet</h2>
+  <p style="font-family: 'Open Sans'; font-size: 14px">
+    Chosir le secteur,le moyen de transport puis l'horraire.
+  </p>
+  <div class="form-group">
+    <label for="secteur">Selectionner le secteur:</label>
+    <select class="form-control" id="secteur">
+      <option>MENZAH-ARIANA</option>
+      <option>NASER-MENZAH</option>
+      <option>BORJ-BOBO</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="moyen de transport">Choisir votre moyen de transport:</label>
+    <select class="form-control" id="moyen de transport">
+      <option>BUS</option>
+      <option>TRAIN</option>
+      <option>METRO</option>
+    </select>
+    <label for="horraire">Choisir l'heure:</label>
+    <select class="form-control" id="horraire">
+      <option>9:00</option>
+      <option>10:00</option>
+      <option>11:00</option>
+    </select>
     <br />
     <div class="row">
-      <div class="col d-grid">
-        <button type="submit" class="btn btn-custom-color btn-block">
-          Enregistrer
+      <div class="col">
+        <button
+          type="submit"
+          class="btn button btn-block"
+          style="background-color: #30c16a; font-size: 16px"
+        >
+          Confirmer Trajet
         </button>
       </div>
-      <div class="col d-grid">
-        <button type="reset" class="btn btn-custom-color btn-block">
+      <div class="col">
+        <button
+          type="reset"
+          class="btn button btn-block"
+          style="background-color: #30c16a; font-size: 16px"
+        >
           Annuler
         </button>
       </div>
     </div>
-    <br /><br />
-  </form>
+  </div>
 </div>

@@ -1,0 +1,67 @@
+/* 
+.title{
+    font-family: "Open Sans";
+    font-weight: bold;
+    size: 35px;
+    color:#03014C;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-top: 10%;
+  }
+.button{
+    float:right;
+    font-weight: bold;
+    width:240px;
+    height:65px;
+    font-family:"Open Sans";
+    font-size:14px;
+    font-weight: 600;
+    border: 1px solid;
+
+}
+ */
+/* list-voyage.component.css */
+
+.container {
+    margin-top: 20px;
+  }
+  
+  .title {
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 35px;
+    color: #03014C;
+    margin-bottom: 20px;
+  }
+  
+  .center {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .button {
+    float: right;
+    font-weight: bold;
+    width: 240px;
+    height: 65px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .center {
+      width: 90%;
+    }
+  
+    .button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }

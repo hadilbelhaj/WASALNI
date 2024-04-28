@@ -23,7 +23,7 @@ export class AjoutmoyentransportComponent {
     if (data["status"]=="success"){
       alert("ajout avec succèe");
     }else {
-      alert("ajout échoué");
+      alert(data["message"]);
     }
   }
   AjouterMoyenTranport(){

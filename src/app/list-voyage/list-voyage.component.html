@@ -1,23 +1,49 @@
 <div>
-    <button type="button" class="btn btn-primary">Ajouter voyage </button>
+    <button type="button" class="btn button btn-primary">Ajouter voyage </button>
     <div class="center">
         <h2 class="title">Liste des voyage du secteur :</h2>
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <td>voyage id</td>
-                    <td>temp_dep</td>
-                    <td>temp_arr</td>                        
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let voyage of voyages">
-                    <td>voyage.id</td>
-                    <td>voyage.temp_dep</td>
-                    <td>voyage.temp_arrivee</td>
-                </tr>
-            </tbody>
-        </table>
+        <div  *ngIf="voyagesBus.length">
+            <h5>Bus : </h5>
+            <p >Prix : {{prixBus}}</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>voyage id</td>
+                        <td>temp_dep</td>
+                        <td>temp_arr</td>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let voyage of voyagesBus">
+                        <td>{{voyage.idvoyage}}</td>
+                        <td>{{voyage.temp_dep}}</td>
+                        <td>{{voyage.temp_arr}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div *ngIf="voyagesMetro.length">
+            <h5 >Métro : </h5>
+            <p >Prix : {{prixMetro}}</p>
+            <table class="table table-striped" >
+                <thead>
+                    <tr>
+                        <td>voyage id</td>
+                        <td>temp_dep</td>
+                        <td>temp_arr</td>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let voyage of voyagesMetro">
+                        <td>{{voyage.idvoyage}}</td>
+                        <td>{{voyage.temp_dep}}</td>
+                        <td>{{voyage.temp_arr}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
 </div>
 
