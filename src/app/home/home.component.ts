@@ -1,10 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { AboutComponent } from '../about/about.component';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceShService } from '../services/service-sh.service';
-import { FormControl, FormGroup } from '@angular/forms';
+
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -15,20 +11,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  title:
-    | string
-    | string[]
-    | Set<string>
-    | { [klass: string]: any }
-    | null
-    | undefined;
-  constructor(private route: Router, private share: ServiceShService) {
-    console.log(this.share.data);
+  constructor(private route: Router) {
   }
 
-  add(f: NgForm) {
-    console.log(f);
-  }
   goTosignup() {
     this.route.navigate(['sign-up']);
   }

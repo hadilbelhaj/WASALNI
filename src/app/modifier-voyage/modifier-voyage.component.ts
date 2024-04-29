@@ -21,20 +21,18 @@ export class ModifierVoyageComponent implements OnInit {
   
   modifierVoyage(){
     if (this.temp_dep!=this.initial_temp_dep || this.temp_arr!=this.initial_temp_arr){
-      let url="http://localhost/api/modifier_voyage.php?voyageId="+this.voyageId+"&temp_dep="+this.temp_dep+"&temp_arr="+this.temp_arr;
+      let url = `http://localhost/api/modifier_voyage.php?voyageId=${this.voyageId}&temp_dep=${this.temp_dep}&temp_arr=${this.temp_arr}`;
       let configData={
         method:"PUT",
       };
       fetch(url,configData).then(resp=>resp.json()).then(data=>{
-        console.log(data);
         if (data['status']=="success"){
-          alert("Ajoutez avec succèe");
+          alert("Modifié avec succèe");
         }else {
-          alert("Ajout échoué");
+          alert("Modification échoué");
         }
       });
     }else {
-      console.log(this.temp_dep,this.temp_arr);
       alert("Vous devez changer l'intervalle du temp");
     }
   }
@@ -46,8 +44,6 @@ export class ModifierVoyageComponent implements OnInit {
       this.initial_temp_arr=this.temp_arr;
       this.initial_temp_dep=this.temp_dep;
     });
-    console.log(this.initial_temp_dep , this.initial_temp_arr);
-    console.log(this.temp_dep , this.temp_arr);
   }
   
 }
