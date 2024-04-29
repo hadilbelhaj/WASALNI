@@ -1,0 +1,18 @@
+<div class="center">
+    <h2 class="title" >Modifier Voyage  {{voyageId}}</h2>
+   
+    <form class="needs-validation">
+        <div class="row my-3" style="width:500px">
+            <div class="col">
+                <label>Temp départ</label>
+                <input type="time" [(ngModel)]="temp_dep" class="form-control" name="td">
+            </div>
+            <div class="col">
+                <label>Temp arrivée</label>
+                <input type="time" [(ngModel)]="temp_arr" class="form-control" name="ta">
+            </div>
+        </div>
+        <button type="submit" class="btn button" (click)="modifierVoyage()"style="background-color:#30C16A;font-size: 16px;">Modifier</button>  
+    </form>
+
+</div>

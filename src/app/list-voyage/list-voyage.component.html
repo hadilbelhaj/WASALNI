@@ -1,5 +1,5 @@
-<div>
-    <button type="button" class="btn button btn-primary">Ajouter voyage </button>
+<div class="text">
+    <button type="button" class="btn button btn-primary" (click)="goToAjouterVoyage()">Ajouter voyage</button>
     <div class="center">
         <h2 class="title">Liste des voyage du secteur :</h2>
         <div  *ngIf="voyagesBus.length">
@@ -20,8 +20,8 @@
                         <td>{{voyage.idvoyage}}</td>
                         <td>{{voyage.temp_dep}}</td>
                         <td>{{voyage.temp_arr}}</td>
-                        <td><button class="btn btn-primary">Modifier</button></td>
-                        <td><button class="btn"><i class="fa fa-trash" style="font-size:30px;color:red"></i></button></td>
+                        <td><button class="btn btn-primary" (click)="goToModifierVoyage(voyage.idvoyage,voyage.temp_dep,voyage.temp_arr)">Modifier</button></td>
+                        <td><button class="btn" (click)="supprimerVoyage(voyage.idvoyage)"><i class="fa fa-trash" style="font-size:30px;color:red"></i></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -36,8 +36,8 @@
                         <td>voyage id</td>
                         <td>tempde départ</td>
                         <td>temp d'arrivée</td>
-                        <td>.</td>
-                        <td>.</td>
+                        <td>Modifier le voyage</td>
+                        <td>Supprimer le voyage</td>   
                     </tr>
                 </thead>
                 <tbody>
@@ -46,11 +46,10 @@
                         <td>{{voyage.temp_dep}}</td>
                         <td>{{voyage.temp_arr}}</td>
                         <td>
-                            <button type="button">Modifier</button>
+                            <button type="button" class="btn btn-primary" (click)="goToModifierVoyage(voyage.idvoyage,voyage.temp_dep,voyage.temp_arr)">Modifier</button>
                         </td>
                         <td>
-                            <button type="button" class="btn">Supprimer</button>
-                        </td>
+                            <td><button class="btn" (click)="supprimerVoyage(voyage.idvoyage)"><i class="fa fa-trash" style="font-size:30px;color:red"></i></button></td>
                     </tr>
                 </tbody>
             </table>

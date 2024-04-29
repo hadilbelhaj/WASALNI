@@ -16,7 +16,6 @@ export class ConsulterSecteurComponent {
   secteurs=["Tunis Centre","La Marsa","Carthage","El Menzah","Le Bardo","El Omrane","Bab Bhar","Bab Souika"];
   
   fOk(resp:Response){
-    console.log("hello");
     return resp.json();
   }
   fGet(data:Data){

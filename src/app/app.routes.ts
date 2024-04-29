@@ -8,8 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { ConsulterSecteurComponent } from './consulter-secteur/consulter-secteur.component';
 import { AjouterVoyageComponent } from './ajouter-voyage/ajouter-voyage.component';
-import { ModifierSupprimerVoyageComponent } from './modifier-supprimer-voyage/modifier-supprimer-voyage.component';
+// import { ModifierSupprimerVoyageComponent } from './modifier-supprimer-voyage/modifier-supprimer-voyage.component';
 import { ListVoyageComponent } from './list-voyage/list-voyage.component';
+import { ModifierVoyageComponent } from './modifier-voyage/modifier-voyage.component';
 export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'profile', component: ProfileComponent },
@@ -20,6 +21,7 @@ export const routes: Routes = [
   {path:'sign-in',component:SignInComponent},
   {path:'consulter-secteur',component:ConsulterSecteurComponent},
   {path:'ajouter-voyage',component:AjouterVoyageComponent},
-  {path:'modifier-supprimer-voyage',component:ModifierSupprimerVoyageComponent},
+  // {path:'modifier-supprimer-voyage',component:ModifierSupprimerVoyageComponent},
   {path:'list-voyage',component:ListVoyageComponent},
+  {path : 'modifier_voyage',component:ModifierVoyageComponent}
 ];
