@@ -18,7 +18,6 @@ export class ConsulterSecteurComponent {
   
   constructor(private router:Router){}
   async goToListVoyage(){
-    alert("working");
     if (this.selectedArrivee==this.selectedDepart){
       alert("Vous devez séléctionnez différents villes ");
 
@@ -27,8 +26,7 @@ export class ConsulterSecteurComponent {
       await fetch(url).then(resp=>resp.json()).then(data=>{      
         this.idSecteur=data[0]["id"];
       });
-      console.log(this.idSecteur);
-      this.router.navigate(['/list-voyage']);
+      this.router.navigate(['/list-voyage'],{ queryParams: { idSecteur:this.idSecteur} });
 
     }
   }

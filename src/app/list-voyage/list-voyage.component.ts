@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Data, Router, RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Data, Router, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-list-voyage',
   standalone: true,
@@ -10,7 +10,7 @@ import { Data, Router, RouterOutlet } from '@angular/router';
   styleUrl: './list-voyage.component.css'
 })
 export class ListVoyageComponent implements OnInit{
-  constructor(private router: Router) {}
+  constructor(private router: Router, private route: ActivatedRoute) {}
   secteurId=1;
   prixBus=0;
   prixMetro=0;
@@ -53,6 +53,9 @@ export class ListVoyageComponent implements OnInit{
     }).catch(error => console.error('Error deleting voyage:', error));;
   }
   ngOnInit(){
+    this.route.queryParams.subscribe(params => {
+      this.secteurId = params['idSecteur'];
+    });
     this.getVoyages();
   }
 }
