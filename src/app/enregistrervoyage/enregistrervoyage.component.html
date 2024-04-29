@@ -4,45 +4,46 @@
     Chosir le secteur,le moyen de transport puis l'horraire.
   </p>
   <div class="form-group">
-    <label for="secteur">Selectionner le secteur:</label>
-    <select class="form-control" id="secteur">
-      <option>MENZAH-ARIANA</option>
-      <option>NASER-MENZAH</option>
-      <option>BORJ-BOBO</option>
-      <option>4</option>
-      
-      <option>5</option>
-    </select>
+    Ville depart : 
+    <div >
+        <select [(ngModel)]="selectedDepart" name="vd" class="form-select">
+            <option *ngFor="let secteur of secteurs">{{secteur}}</option>
+        </select>
+    </div>
+    Ville arrivée
+    <div class="mb-3" >
+        <select  [(ngModel)]="selectedArrivee" class="form-select" name="va">
+            <option *ngFor="let secteur of secteurs">{{secteur}}</option>
+        </select>
+    </div>
     <label for="moyen de transport">Choisir votre moyen de transport:</label>
     <select class="form-control" id="moyen de transport">
-      <option>BUS</option>
-      <option>TRAIN</option>
-      <option>METRO</option>
+      <option>Bus</option>
+      <option>Métro</option>
     </select>
-    <label for="horraire">Choisir l'heure:</label>
-    <select class="form-control" id="horraire">
-      <option>9:00</option>
-      <option>10:00</option>
-      <option>11:00</option>
-    </select>
-    <br />
-    <div class="row">
+    <label for="horraire">Choisir l'interval : les moyen de transport valable entre ces deux heures  </label>
+    <div class="row my-3" >
       <div class="col">
-        <button
-          type="submit"
-          class="btn button btn-block"
-          style="background-color: #30c16a; font-size: 16px"
-        >
-          Confirmer Trajet
-        </button>
+        <select  class="form-control" name="hd">
+          <option *ngFor="let heure of heures">{{heure}}</option>
+        </select>
       </div>
       <div class="col">
-        <button
-          type="reset"
-          class="btn button btn-block"
-          style="background-color: #30c16a; font-size: 16px"
-        >
-          Annuler
+        <select  class="form-control" name="ha">
+          <option *ngFor="let heure of heures">{{heure}}</option>
+        </select>
+      </div>
+      <div class="col">
+        <select class="form-control" name="ap">
+          <option>AM</option>
+          <option>PM</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit"class="btn button btn-block"style="background-color: #30c16a; font-size: 16px">
+          Rechercher
         </button>
       </div>
     </div>

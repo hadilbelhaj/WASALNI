@@ -4,13 +4,15 @@
         <h2 class="title">Liste des voyage du secteur :</h2>
         <div  *ngIf="voyagesBus.length">
             <h5>Bus : </h5>
-            <p >Prix : {{prixBus}}</p>
+            <p >Prix : {{prixBus}} DT </p>
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <td>voyage id</td>
-                        <td>temp_dep</td>
-                        <td>temp_arr</td>                        
+                        <td>id</td>
+                        <td>temp d'arrivée</td>
+                        <td>temp d'arrivée</td>   
+                        <td>Modifier le voyage</td>
+                        <td>Supprimer le voyage</td>                     
                     </tr>
                 </thead>
                 <tbody>
@@ -18,6 +20,8 @@
                         <td>{{voyage.idvoyage}}</td>
                         <td>{{voyage.temp_dep}}</td>
                         <td>{{voyage.temp_arr}}</td>
+                        <td><button class="btn btn-primary">Modifier</button></td>
+                        <td><button class="btn"><i class="fa fa-trash" style="font-size:30px;color:red"></i></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -30,8 +34,10 @@
                 <thead>
                     <tr>
                         <td>voyage id</td>
-                        <td>temp_dep</td>
-                        <td>temp_arr</td>                        
+                        <td>tempde départ</td>
+                        <td>temp d'arrivée</td>
+                        <td>.</td>
+                        <td>.</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,6 +45,12 @@
                         <td>{{voyage.idvoyage}}</td>
                         <td>{{voyage.temp_dep}}</td>
                         <td>{{voyage.temp_arr}}</td>
+                        <td>
+                            <button type="button">Modifier</button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn">Supprimer</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

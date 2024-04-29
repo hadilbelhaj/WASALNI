@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
-import { LoginComponent } from '../deleted/loginadmin/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 import { NgModel } from '@angular/forms';
@@ -11,7 +10,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [
     RouterLink,
-    LoginComponent,
     RouterOutlet,
     HttpClientModule,
     FormsModule,
