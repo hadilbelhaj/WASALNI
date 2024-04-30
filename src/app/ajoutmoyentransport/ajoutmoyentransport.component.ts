@@ -27,7 +27,6 @@ export class AjoutmoyentransportComponent {
     }
   }
   AjouterMoyenTranport(){
-    console.log(JSON.stringify(this.transport));
     let url="http://localhost/api/add_moyen_transport.php";
     let configData={
       method:'POST',
